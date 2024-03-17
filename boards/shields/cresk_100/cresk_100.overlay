@@ -87,8 +87,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(2,3) RC(2,4)    RC(7,4) RC(7,3) RC(8,2) RC(8,1) RC(8,
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
-        a-gpios = <&gpiob 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpiob 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&blackpill 19  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&blackpill 18  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <3>;
         status = "okay";
     };
@@ -96,8 +96,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(2,3) RC(2,4)    RC(7,4) RC(7,3) RC(8,2) RC(8,1) RC(8,
     right_encoder: encoder_right {
         compatible = "alps,ec11";
         label = "RIGHT_ENCODER";
-        a-gpios = <&gpiob 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpiob 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&blackpill 42  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&blackpill 41  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <3>;
         status = "okay";
     };
@@ -122,6 +122,7 @@ arduino_i2c: &i2c1 {
         display-offset = <0>;
         multiplex-ratio = <31>;
         com-sequential;
+        inversion-on;
         prechargep = <0x22>;
     };
 };
