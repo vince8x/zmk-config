@@ -43,7 +43,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(2,3) RC(2,4)    RC(7,4) RC(7,3) RC(8,2) RC(8,1) RC(8,
     };
 
     kscan_matrix_1: kscan_matrix_1 {
-        compatible = "zmk,kscan-gpio-round-robin-matrix";
+        compatible = "zmk,kscan-gpio-demux";
         label = "KSCAN_ROUND_ROBIN_MATRIX_1";
 
         output-gpios
@@ -63,7 +63,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(2,3) RC(2,4)    RC(7,4) RC(7,3) RC(8,2) RC(8,1) RC(8,
     };
 
     kscan_matrix_2: kscan_matrix_2 {
-        compatible = "zmk,kscan-gpio-round-robin-matrix";
+        compatible = "zmk,kscan-gpio-demux";
         label = "KSCAN_ROUND_ROBIN_MATRIX_2";
 
         output-gpios
