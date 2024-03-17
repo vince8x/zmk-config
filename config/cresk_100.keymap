@@ -117,11 +117,9 @@
 
         default_layer {
             bindings = <
-                                                                             &kp C_MUTE         &none
 &kp Q            &kp W                &kp F             &kp P                &kp B              &kp J            &kp L               &kp U           &kp Y           &none
 &kp A            &kp R                &kp S             &kp T                &kp G              &kp M            &kp N               &kp E           &kp I           &kp O
 &kp Z            &kp X                &kp C             &kp D                &kp V              &kp K            &kp H               &kp COMMA       &mt RALT DOT    &kp BSPC
-                 &none                &kp ESC                                                                                        &kp DEL     &none
                                                         &mo SYM              &kp SPACE          &kp RET          &mo NUM
             >;
 
@@ -132,7 +130,6 @@
 
         sym_layer {
             bindings = <
-                                                                             &trans             &trans
 &none            &kp BSLH             &kp PRCNT         &kp DLLR             &none              &none            &kp CARET           &kp LBRC        &kp RBRC        &kp APOS
 &kp STAR         &kp LPAR             &kp RPAR          &kp COLON            &none              &none            &kp SQT             &kp LBKT        &kp RBKT        &kp SEMI
 &mo FUN          &kp GRAVE            &kp AT            &kp AMPS             &none              &none            &kp HASH            &kp LT          &kp GT          &kp DEL                         
@@ -143,33 +140,27 @@
 
         num_layer {
             bindings = <
-                                                                             &trans             &trans
 &kp BSPC         &kp N4               &kp N5            &kp N6               &none              &none            &kp PIPE            &kp MINUS       &kp FSLH        &none
 &kp DOT          &kp N1               &kp N2            &kp N3               &none              &none            &kp DQT             &kp UNDER       &kp EQUAL       &mo NAV
 &kp TILDE        &kp N7               &kp N8            &kp N9               &none              &none            &kp PLUS            &kp QMARK       &kp EXCL        &kp DEL                                                                &none           &none
-                 &none                &kp DOT                                                                                        &none           &none
                                                         &kp N0               &kp SPACE          &kp RET          &trans
             >;
         };
 
         nav_layer {
             bindings = <
-                                                                             &trans             &trans
 &kp K_UNDO       &kp LS(DEL)          &kp LC(INS)       &kp LS(INS)          &key_repeat        &key_repeat      &kp RS(INS)         &kp RC(INS)     &kp RS(DEL)     &kp K_UNDO
 &kp LMETA        &kp LALT             &kp LCTRL         &kp LSHFT            &none              &kp LEFT         &kp DOWN            &kp UP          &kp RIGHT       &mt CAPS
 &none            &none                &none             &none                &none              &kp HOME         &kp PAGE_DOWN       &kp PAGE_UP     &kp END         &kp INS
-                 &none                &none                                                                                          &kp DEL         &none
                                                         &trans               &trans             &trans           &trans
             >;
         };
 
         fun_layer {
             bindings = <
-                                                                             &trans             &trans
 &none            &kp F6               &kp F5            &kp F4               &kp F10            &none            &none               &none           &none           &none                                                                             &trans             &trans
 &kp CAPS         &kp F3               &kp F2            &kp F1               &kp F11            &kp K_MUTE       &kp C_VOL_DN        &kp C_VOL_UP    &kp C_BRI_DN    &kp C_BRI_UP
 &trans           &kp F9               &kp F8            &kp F7               &kp F12            &none            &none               &none           &none           &none                                       
-                 &none                &trans                                                                                         &trans          &trans
                                                         &trans               &trans             &none            &trans
             >;
         };
