@@ -10,7 +10,7 @@
 # include:
 #   - board: bdn9_rev2
 #   - board: nice_nano_v2
-#     shield: reviung41
+#     shield: cresk_100
 #   - board: nice_nano_v2
 #     shield: corne_left
 #     cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
@@ -19,4 +19,4 @@
 ---
 include:
   - board: blackpill_f411ce
-    shield: reviung34
+    shield: cresk_100
