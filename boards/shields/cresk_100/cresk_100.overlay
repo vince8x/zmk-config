@@ -45,40 +45,42 @@ RC(3,0) RC(3,1) RC(3,2) RC(2,3) RC(2,4)    RC(7,4) RC(7,3) RC(8,2) RC(8,1) RC(8,
     kscan_matrix_1: kscan_matrix_1 {
         compatible = "zmk,kscan-gpio-demux";
         label = "KSCAN_ROUND_ROBIN_MATRIX_1";
+        polling-interval-msec = <25>;
 
         output-gpios
-            = <&gpioa 5  GPIO_ACTIVE_HIGH>
-            , <&gpioa 4  GPIO_ACTIVE_HIGH>
-            , <&gpioa 3  GPIO_ACTIVE_HIGH>
-            , <&gpioa 2  GPIO_ACTIVE_HIGH>
-            , <&gpioa 1  GPIO_ACTIVE_HIGH>
+            = <&blackpill 15  GPIO_ACTIVE_HIGH>
+            , <&blackpill 14  GPIO_ACTIVE_HIGH>
+            , <&blackpill 13  GPIO_ACTIVE_HIGH>
+            , <&blackpill 12  GPIO_ACTIVE_HIGH>
+            , <&blackpill 11  GPIO_ACTIVE_HIGH>
             ;
         input-gpios
-            = <&gpioa 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&blackpill 15  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 14  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 13  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 12  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 11  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
     kscan_matrix_2: kscan_matrix_2 {
         compatible = "zmk,kscan-gpio-demux";
         label = "KSCAN_ROUND_ROBIN_MATRIX_2";
+        polling-interval-msec = <25>;
 
         output-gpios
-            = <&gpiob 7  GPIO_ACTIVE_HIGH>
-            , <&gpioa 0  GPIO_ACTIVE_HIGH>
-            , <&gpioa 15 GPIO_ACTIVE_HIGH>
-            , <&gpiob 3  GPIO_ACTIVE_HIGH>
-            , <&gpiob 4  GPIO_ACTIVE_HIGH>
+            = <&blackpill 43  GPIO_ACTIVE_HIGH>
+            , <&blackpill 10  GPIO_ACTIVE_HIGH>
+            , <&blackpill 28 GPIO_ACTIVE_HIGH>
+            , <&blackpill 39  GPIO_ACTIVE_HIGH>
+            , <&blackpill 40  GPIO_ACTIVE_HIGH>
             ;
         input-gpios
-            = <&gpiob 7  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpioa 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpiob 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpiob 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&blackpill 43  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 10  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 39  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&blackpill 40  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
