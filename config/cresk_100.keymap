@@ -73,8 +73,8 @@ ZMK_BEHAVIOR(hml, hold_tap,
     tapping-term-ms = <280>;
     quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <150>;
-    bindings = &kp, &kp;
-    hold-trigger-key-positions = KEYS_R THUMBS;
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R> <THUMBS>;
     hold-trigger-on-release;
 )
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
