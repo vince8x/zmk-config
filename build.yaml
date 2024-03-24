@@ -20,3 +20,5 @@
 include:
   - board: blackpill_f411ce
     shield: cresk_100
+  - board: waveshare_rp2040_zero
+    shield: cheapino

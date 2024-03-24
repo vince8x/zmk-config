@@ -1,0 +1,9 @@
+file_format: "1"
+id: cheapino
+name: cheapino
+type: shield
+url: https://github.com/nguyendown/cresk
+requires: [waveshare_rp2040_zero]
+features:
+  - keys
+  - encoder
