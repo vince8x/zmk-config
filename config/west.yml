@@ -4,9 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
+    - name: glebsexy
+      url-base: https://github.com/glebsexy
+    - name: vince8x
+      url-base: https://github.com/vince8x
   projects:
     - name: zmk
-      remote: urob
+      remote: vince8x
       revision: main
       import: app/west.yml
   self:
