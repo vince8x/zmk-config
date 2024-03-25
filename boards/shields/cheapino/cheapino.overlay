@@ -42,7 +42,7 @@ RC(2,4) RC(2,3) RC(2,2) RC(2,1) RC(2,0)    RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,
     };
 
     kscan_matrix_1: kscan_matrix_1 {
-        compatible = "zmk,kscan-gpio-charlieplex";
+        compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN_ROUND_ROBIN_MATRIX_1";
         diode-direction = "row2col";
         row-gpios
@@ -63,7 +63,7 @@ RC(2,4) RC(2,3) RC(2,2) RC(2,1) RC(2,0)    RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,
     };
 
     kscan_matrix_2: kscan_matrix_2 {
-        compatible = "zmk,kscan-gpio-charlieplex";
+        compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN_ROUND_ROBIN_MATRIX_2";
         diode-direction = "col2row";
 
