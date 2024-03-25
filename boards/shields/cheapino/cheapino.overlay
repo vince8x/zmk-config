@@ -27,11 +27,24 @@ RC(2,4) RC(2,3) RC(2,2) RC(2,1) RC(2,0)    RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,
         >;
     };
 
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
+    kscan0: kscan {
+        compatible = "zmk,kscan-composite";
         label = "KSCAN";
-        diode-direction = "row2col";
 
+        matrix_1 {
+            kscan = <&kscan_matrix_1>;
+        };
+
+        matrix_2 {
+            kscan = <&kscan_matrix_2>;
+            column-offset = <6>;
+        };
+    };
+
+    kscan_matrix_1: kscan_matrix_1 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        label = "KSCAN_ROUND_ROBIN_MATRIX_1";
+        diode-direction = "row2col";
         row-gpios
             = <&gpio0 6  GPIO_ACTIVE_HIGH>
             , <&gpio0 5  GPIO_ACTIVE_HIGH>
@@ -41,20 +54,36 @@ RC(2,4) RC(2,3) RC(2,2) RC(2,1) RC(2,0)    RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,
 
         col-gpios
             = <&gpio0 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 1  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-            , <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-
     };
+
+    kscan_matrix_2: kscan_matrix_2 {
+        compatible = "zmk,kscan-gpio-charlieplex";
+        label = "KSCAN_ROUND_ROBIN_MATRIX_2";
+        diode-direction = "col2row";
+
+        col-gpios
+            = <&gpio0 0  GPIO_ACTIVE_HIGH>
+            , <&gpio0 1  GPIO_ACTIVE_HIGH>
+            , <&gpio0 2  GPIO_ACTIVE_HIGH>
+            , <&gpio0 29  GPIO_ACTIVE_HIGH>
+            , <&gpio0 28  GPIO_ACTIVE_HIGH>
+            , <&gpio0 27  GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&gpio0 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
 
 
     right_encoder: encoder_right {
